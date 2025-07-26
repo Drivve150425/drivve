@@ -19,7 +19,7 @@ import {
   View
 } from "react-native";
 import DateTimePickerModal from "react-native-modal-datetime-picker";
-// Import avatars as React component
+// Import avatars as React components
 import Avatar1 from "../assets/avatars/avatar1.svg";
 import Avatar2 from "../assets/avatars/avatar2.svg";
 import Avatar3 from "../assets/avatars/avatar3.svg";

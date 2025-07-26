@@ -1,33 +1,32 @@
-import React, { useState, useEffect } from "react";
+import { Ionicons, MaterialIcons } from "@expo/vector-icons";
+import * as ImagePicker from "expo-image-picker";
+import { LinearGradient } from "expo-linear-gradient";
+import React, { useEffect, useState } from "react";
 import {
-  View,
-  Text,
-  TextInput,
-  StyleSheet,
-  TouchableOpacity,
-  Image,
-  Platform,
   Alert,
   BackHandler,
-  Modal,
+  FlatList,
+  Image,
   KeyboardAvoidingView,
-  ScrollView,
+  Modal,
+  Platform,
   SafeAreaView,
-  FlatList
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View
 } from "react-native";
-import * as ImagePicker from "expo-image-picker";
 import DateTimePickerModal from "react-native-modal-datetime-picker";
-import { LinearGradient } from "expo-linear-gradient";
-import { Ionicons } from "@expo/vector-icons";
-import { MaterialIcons } from "@expo/vector-icons";
-// Import avatars as React components
+// Import avatars as React component
 import Avatar1 from "../assets/avatars/avatar1.svg";
 import Avatar2 from "../assets/avatars/avatar2.svg";
 import Avatar3 from "../assets/avatars/avatar3.svg";
 import Avatar4 from "../assets/avatars/avatar4.svg";
 
+import { sendEmailOtp, verifyEmailOtp } from "../services/api.ts";
 import indiaStatesCities from "../services/india_states_cities.json";
-import { fetchCountries, sendEmailOtp, verifyEmailOtp } from "../services/api.ts";
 
 const avatars = [Avatar1, Avatar2, Avatar3, Avatar4];
 
